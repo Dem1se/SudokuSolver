@@ -22,6 +22,8 @@ namespace SudokuSolver
         private void solveButton_Click(object sender, EventArgs e)
         {
             int collectionIterationIndex = 0;
+            int answerIndex = 0;
+            int[] answers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             PopulateInputs();
 
             // brute force the values
@@ -29,28 +31,37 @@ namespace SudokuSolver
             {
                 if (value == -1)
                 {
-                    int answer = 0;
                     do
                     {
-                        answer++;
-                        Inputs[collectionIterationIndex] = answer;
-                        if (answer > 9)
-                            throw new Exception();
-                    } while (!MoveIsValid(answer, GetPosition(collectionIterationIndex).X, GetPosition(collectionIterationIndex).Y));
+                        if (collectionIterationIndex == 0)
+                        {
+                            Inputs[collectionIterationIndex] = 1;
+                        }
+                        else
+                        {
+                            Inputs[collectionIterationIndex] = answers[answerIndex % 9];
+                            answerIndex++;
+                        }
+                        
+                    } while (!MoveIsValid(Inputs[collectionIterationIndex], GetPosition(collectionIterationIndex).X, GetPosition(collectionIterationIndex).Y));
                 }
                 collectionIterationIndex++;
+                Console.WriteLine($"CellIndex: {collectionIterationIndex}");
             }
 
             // assign the values back to the textBoxes;
             collectionIterationIndex = 0;
+            List<int> InputCopy = Inputs.ToList();
+            InputCopy.Reverse();
             foreach (Control ctrl in Controls)
             {
                 if (ctrl is TextBox)
                 {
-                    ctrl.Text = Inputs[collectionIterationIndex].ToString();
+                    ctrl.Text = InputCopy[collectionIterationIndex].ToString();
                     collectionIterationIndex++;
                 }
             }
+            solveButton.Enabled = false;
         }
 
         private void PopulateInputs()
@@ -70,7 +81,6 @@ namespace SudokuSolver
                     }
                 }
             }
-            Inputs.Reverse();
         }
 
         private bool MoveIsValid(int move, int column, int row)
@@ -89,6 +99,16 @@ namespace SudokuSolver
             }
 
             // check the column for same value
+            for (int y = 0; y < 9; y++)
+            {
+                if (move == Inputs[FindIndex(column, y)])
+                {
+                    if (y != row)
+                    {
+                        isValid = false;
+                    }
+                }
+            }
 
             // check the 9x9 cell for same value
 
