@@ -119,6 +119,7 @@
             this.textBox0.Name = "textBox0";
             this.textBox0.Size = new System.Drawing.Size(20, 20);
             this.textBox0.TabIndex = 0;
+            this.textBox0.Text = "5";
             // 
             // textBox1
             // 
@@ -127,6 +128,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(20, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "3";
             // 
             // textBox2
             // 
@@ -151,6 +153,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(20, 20);
             this.textBox4.TabIndex = 4;
+            this.textBox4.Text = "7";
             // 
             // textBox5
             // 
@@ -191,6 +194,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(20, 20);
             this.textBox9.TabIndex = 9;
+            this.textBox9.Text = "6";
             // 
             // textBox10
             // 
@@ -215,6 +219,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(20, 20);
             this.textBox12.TabIndex = 12;
+            this.textBox12.Text = "1";
             // 
             // textBox13
             // 
@@ -223,6 +228,7 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(20, 20);
             this.textBox13.TabIndex = 13;
+            this.textBox13.Text = "9";
             // 
             // textBox14
             // 
@@ -231,6 +237,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(20, 20);
             this.textBox14.TabIndex = 14;
+            this.textBox14.Text = "5";
             // 
             // textBox15
             // 
@@ -271,6 +278,7 @@
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(20, 20);
             this.textBox19.TabIndex = 19;
+            this.textBox19.Text = "9";
             // 
             // textBox20
             // 
@@ -279,6 +287,7 @@
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(20, 20);
             this.textBox20.TabIndex = 20;
+            this.textBox20.Text = "8";
             // 
             // textBox21
             // 
@@ -319,6 +328,7 @@
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(20, 20);
             this.textBox25.TabIndex = 25;
+            this.textBox25.Text = "6";
             // 
             // textBox26
             // 
@@ -335,6 +345,7 @@
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(20, 20);
             this.textBox27.TabIndex = 27;
+            this.textBox27.Text = "8";
             // 
             // textBox28
             // 
@@ -367,6 +378,7 @@
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(20, 20);
             this.textBox31.TabIndex = 31;
+            this.textBox31.Text = "6";
             // 
             // textBox32
             // 
@@ -399,6 +411,7 @@
             this.textBox35.Name = "textBox35";
             this.textBox35.Size = new System.Drawing.Size(20, 20);
             this.textBox35.TabIndex = 35;
+            this.textBox35.Text = "3";
             // 
             // textBox36
             // 
@@ -407,6 +420,7 @@
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new System.Drawing.Size(20, 20);
             this.textBox36.TabIndex = 36;
+            this.textBox36.Text = "4";
             // 
             // textBox37
             // 
@@ -431,6 +445,7 @@
             this.textBox39.Name = "textBox39";
             this.textBox39.Size = new System.Drawing.Size(20, 20);
             this.textBox39.TabIndex = 39;
+            this.textBox39.Text = "8";
             // 
             // textBox40
             // 
@@ -447,6 +462,7 @@
             this.textBox41.Name = "textBox41";
             this.textBox41.Size = new System.Drawing.Size(20, 20);
             this.textBox41.TabIndex = 41;
+            this.textBox41.Text = "3";
             // 
             // textBox42
             // 
@@ -471,6 +487,7 @@
             this.textBox44.Name = "textBox44";
             this.textBox44.Size = new System.Drawing.Size(20, 20);
             this.textBox44.TabIndex = 44;
+            this.textBox44.Text = "1";
             // 
             // textBox45
             // 
@@ -479,6 +496,7 @@
             this.textBox45.Name = "textBox45";
             this.textBox45.Size = new System.Drawing.Size(20, 20);
             this.textBox45.TabIndex = 45;
+            this.textBox45.Text = "7";
             // 
             // textBox46
             // 
@@ -511,6 +529,7 @@
             this.textBox49.Name = "textBox49";
             this.textBox49.Size = new System.Drawing.Size(20, 20);
             this.textBox49.TabIndex = 49;
+            this.textBox49.Text = "2";
             // 
             // textBox50
             // 
@@ -543,6 +562,7 @@
             this.textBox53.Name = "textBox53";
             this.textBox53.Size = new System.Drawing.Size(20, 20);
             this.textBox53.TabIndex = 53;
+            this.textBox53.Text = "6";
             // 
             // textBox54
             // 
@@ -559,6 +579,7 @@
             this.textBox55.Name = "textBox55";
             this.textBox55.Size = new System.Drawing.Size(20, 20);
             this.textBox55.TabIndex = 55;
+            this.textBox55.Text = "6";
             // 
             // textBox56
             // 
@@ -599,6 +620,7 @@
             this.textBox60.Name = "textBox60";
             this.textBox60.Size = new System.Drawing.Size(20, 20);
             this.textBox60.TabIndex = 60;
+            this.textBox60.Text = "2";
             // 
             // textBox61
             // 
@@ -607,6 +629,7 @@
             this.textBox61.Name = "textBox61";
             this.textBox61.Size = new System.Drawing.Size(20, 20);
             this.textBox61.TabIndex = 61;
+            this.textBox61.Text = "8";
             // 
             // textBox62
             // 
@@ -647,6 +670,7 @@
             this.textBox66.Name = "textBox66";
             this.textBox66.Size = new System.Drawing.Size(20, 20);
             this.textBox66.TabIndex = 66;
+            this.textBox66.Text = "4";
             // 
             // textBox67
             // 
@@ -655,6 +679,7 @@
             this.textBox67.Name = "textBox67";
             this.textBox67.Size = new System.Drawing.Size(20, 20);
             this.textBox67.TabIndex = 67;
+            this.textBox67.Text = "1";
             // 
             // textBox68
             // 
@@ -663,6 +688,7 @@
             this.textBox68.Name = "textBox68";
             this.textBox68.Size = new System.Drawing.Size(20, 20);
             this.textBox68.TabIndex = 68;
+            this.textBox68.Text = "9";
             // 
             // textBox69
             // 
@@ -687,6 +713,7 @@
             this.textBox71.Name = "textBox71";
             this.textBox71.Size = new System.Drawing.Size(20, 20);
             this.textBox71.TabIndex = 71;
+            this.textBox71.Text = "5";
             // 
             // textBox72
             // 
@@ -727,6 +754,7 @@
             this.textBox76.Name = "textBox76";
             this.textBox76.Size = new System.Drawing.Size(20, 20);
             this.textBox76.TabIndex = 76;
+            this.textBox76.Text = "8";
             // 
             // textBox77
             // 
@@ -751,6 +779,7 @@
             this.textBox79.Name = "textBox79";
             this.textBox79.Size = new System.Drawing.Size(20, 20);
             this.textBox79.TabIndex = 79;
+            this.textBox79.Text = "7";
             // 
             // textBox80
             // 
@@ -759,6 +788,7 @@
             this.textBox80.Name = "textBox80";
             this.textBox80.Size = new System.Drawing.Size(20, 20);
             this.textBox80.TabIndex = 80;
+            this.textBox80.Text = "9";
             // 
             // solveButton
             // 
@@ -776,87 +806,87 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.solveButton);
-            this.Controls.Add(this.textBox80);
-            this.Controls.Add(this.textBox79);
-            this.Controls.Add(this.textBox78);
-            this.Controls.Add(this.textBox77);
-            this.Controls.Add(this.textBox76);
-            this.Controls.Add(this.textBox75);
-            this.Controls.Add(this.textBox74);
-            this.Controls.Add(this.textBox73);
-            this.Controls.Add(this.textBox72);
-            this.Controls.Add(this.textBox71);
-            this.Controls.Add(this.textBox70);
-            this.Controls.Add(this.textBox69);
-            this.Controls.Add(this.textBox68);
-            this.Controls.Add(this.textBox67);
-            this.Controls.Add(this.textBox66);
-            this.Controls.Add(this.textBox65);
-            this.Controls.Add(this.textBox64);
-            this.Controls.Add(this.textBox63);
-            this.Controls.Add(this.textBox62);
-            this.Controls.Add(this.textBox61);
-            this.Controls.Add(this.textBox60);
-            this.Controls.Add(this.textBox59);
-            this.Controls.Add(this.textBox58);
-            this.Controls.Add(this.textBox57);
-            this.Controls.Add(this.textBox56);
-            this.Controls.Add(this.textBox55);
-            this.Controls.Add(this.textBox54);
-            this.Controls.Add(this.textBox53);
-            this.Controls.Add(this.textBox52);
-            this.Controls.Add(this.textBox51);
-            this.Controls.Add(this.textBox50);
-            this.Controls.Add(this.textBox49);
-            this.Controls.Add(this.textBox48);
-            this.Controls.Add(this.textBox47);
-            this.Controls.Add(this.textBox46);
-            this.Controls.Add(this.textBox45);
-            this.Controls.Add(this.textBox44);
-            this.Controls.Add(this.textBox43);
-            this.Controls.Add(this.textBox42);
-            this.Controls.Add(this.textBox41);
-            this.Controls.Add(this.textBox40);
-            this.Controls.Add(this.textBox39);
-            this.Controls.Add(this.textBox38);
-            this.Controls.Add(this.textBox37);
-            this.Controls.Add(this.textBox36);
-            this.Controls.Add(this.textBox35);
-            this.Controls.Add(this.textBox34);
-            this.Controls.Add(this.textBox33);
-            this.Controls.Add(this.textBox32);
-            this.Controls.Add(this.textBox31);
-            this.Controls.Add(this.textBox30);
-            this.Controls.Add(this.textBox29);
-            this.Controls.Add(this.textBox28);
-            this.Controls.Add(this.textBox27);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.textBox25);
-            this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox0);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.textBox19);
+            this.Controls.Add(this.textBox20);
+            this.Controls.Add(this.textBox21);
+            this.Controls.Add(this.textBox22);
+            this.Controls.Add(this.textBox23);
+            this.Controls.Add(this.textBox24);
+            this.Controls.Add(this.textBox25);
+            this.Controls.Add(this.textBox26);
+            this.Controls.Add(this.textBox27);
+            this.Controls.Add(this.textBox28);
+            this.Controls.Add(this.textBox29);
+            this.Controls.Add(this.textBox30);
+            this.Controls.Add(this.textBox31);
+            this.Controls.Add(this.textBox32);
+            this.Controls.Add(this.textBox33);
+            this.Controls.Add(this.textBox34);
+            this.Controls.Add(this.textBox35);
+            this.Controls.Add(this.textBox36);
+            this.Controls.Add(this.textBox37);
+            this.Controls.Add(this.textBox38);
+            this.Controls.Add(this.textBox39);
+            this.Controls.Add(this.textBox40);
+            this.Controls.Add(this.textBox41);
+            this.Controls.Add(this.textBox42);
+            this.Controls.Add(this.textBox43);
+            this.Controls.Add(this.textBox44);
+            this.Controls.Add(this.textBox45);
+            this.Controls.Add(this.textBox46);
+            this.Controls.Add(this.textBox47);
+            this.Controls.Add(this.textBox48);
+            this.Controls.Add(this.textBox49);
+            this.Controls.Add(this.textBox50);
+            this.Controls.Add(this.textBox51);
+            this.Controls.Add(this.textBox52);
+            this.Controls.Add(this.textBox53);
+            this.Controls.Add(this.textBox54);
+            this.Controls.Add(this.textBox55);
+            this.Controls.Add(this.textBox56);
+            this.Controls.Add(this.textBox57);
+            this.Controls.Add(this.textBox58);
+            this.Controls.Add(this.textBox59);
+            this.Controls.Add(this.textBox60);
+            this.Controls.Add(this.textBox61);
+            this.Controls.Add(this.textBox62);
+            this.Controls.Add(this.textBox63);
+            this.Controls.Add(this.textBox64);
+            this.Controls.Add(this.textBox65);
+            this.Controls.Add(this.textBox66);
+            this.Controls.Add(this.textBox67);
+            this.Controls.Add(this.textBox68);
+            this.Controls.Add(this.textBox69);
+            this.Controls.Add(this.textBox70);
+            this.Controls.Add(this.textBox71);
+            this.Controls.Add(this.textBox72);
+            this.Controls.Add(this.textBox73);
+            this.Controls.Add(this.textBox74);
+            this.Controls.Add(this.textBox75);
+            this.Controls.Add(this.textBox76);
+            this.Controls.Add(this.textBox77);
+            this.Controls.Add(this.textBox78);
+            this.Controls.Add(this.textBox79);
+            this.Controls.Add(this.textBox80);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

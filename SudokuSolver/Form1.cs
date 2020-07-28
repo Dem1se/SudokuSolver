@@ -79,7 +79,7 @@ namespace SudokuSolver
         {
             for (int cell = 0; cell < 81; cell++)
             {
-                if (Inputs[cell % 9, cell / 9] == -1)
+                if (Inputs[cell / 9, cell % 9] == -1)
                 {
                     PartOfQuestion[cell / 9, cell % 9] = false;
                 }
@@ -112,41 +112,48 @@ namespace SudokuSolver
                             }
                             catch (IndexOutOfRangeException)
                             {
+                                // backtrace routine
                                 Solution[row, column] = -1;
-                                BackTraceRoutine(row, column, answerIndex);
+                                do
+                                {
+                                    // check if the cell is part of the question, don't modify if true
+                                    if (!PartOfQuestion[row, column])
+                                    {
+                                        // keep moving to the left and adding value untill valid
+                                        try
+                                        {
+                                            column--;
+                                            answerIndex++;
+                                            // check if the cell is part of the question, don't modify if true
+                                            if (!PartOfQuestion[row, column])
+                                                Solution[row, column] = answers[answerIndex];
+                                            else
+                                                column--;
+                                        }
+                                        // if you can't move left anymore, move up
+                                        catch (IndexOutOfRangeException)
+                                        {
+                                            row--;
+                                            column = 8;
+                                        }
+                                        finally
+                                        {
+                                            if (!PartOfQuestion[row, column])
+                                                Solution[row, column] = answers[answerIndex];
+                                        }
+                                    }
+                                    // if cell is part of the question, move one step to the left
+                                    else
+                                    {
+                                        column--;
+                                    }
+                                } while (!MoveIsValid(Solution[row, column], column, row));
                             }
                         } while (!MoveIsValid(Solution[row, column], column, row));
                     }
+                    // debug statements
+                    Console.WriteLine("Cell Index: " + $"{(row * 9) + column} -- {Solution[row, column]}");
                 }
-            }
-
-            void BackTraceRoutine(int row, int column, int answerIndex)
-            {
-                do
-                {
-                    // check if the cell is part of the question, don't modify if true
-                    if (!PartOfQuestion[row, column])
-                    {
-                        // keep moving to the left and adding value untill valid
-                        try
-                        {
-                            column--;
-                            answerIndex++;
-                            Solution[row, column] = answers[answerIndex];
-                        }
-                        // if you can't move left anymore, move up
-                        catch (IndexOutOfRangeException)
-                        {
-                            row--;
-                            column = 8;
-                        }
-                    }
-                    // if cell is part of the question, move one step to the left
-                    else
-                    {
-                        column--;
-                    }
-                } while (!MoveIsValid(Solution[row, column], column, row));
             }
         }
 
@@ -181,22 +188,18 @@ namespace SudokuSolver
             }
 
             // check the box for same value
-            // generate the list for the cell block
             List<int> cellBlock = new List<int>(9);
             for (int vertical = 0; vertical < 3; vertical++)
             {
                 for (int horizontal = 0; horizontal < 3; horizontal++)
                 {
                     cellBlock.Add(
-                        Solution
-                        [
+                        Solution[
                             (Utils.Utils.FindCellBlock(row, column)[0] * 3) + vertical,
                             (Utils.Utils.FindCellBlock(row, column)[1] * 3) + horizontal
-                        ]
-                    );
+                        ]);
                 }
             }
-
             cellBlock.RemoveAll(new Predicate<int>(x => x == -1));
             var duplicates = cellBlock.GroupBy(x => x)
                 .Where(g => g.Count() > 1)
@@ -205,8 +208,7 @@ namespace SudokuSolver
             {
                 isValid = false;
             }
-            
-            
+
             return isValid;
         }
     }
