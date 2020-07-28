@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace SudokuSolver
 {
     public partial class Form1 : Form
     {
-        private List<int> Inputs = new List<int>();
+        private int[,] Inputs = new int[9, 9];
+        private int[,] Solution = new int[9, 9];
+        private bool[,] PartOfQuestion = new bool[9, 9];
 
         public Form1()
         {
@@ -16,42 +16,22 @@ namespace SudokuSolver
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // nothing to do on load
         }
 
+        /// <summary>
+        /// The event handler method that takes place when user clicks the "Solve" button.
+        /// </summary>
         private void solveButton_Click(object sender, EventArgs e)
         {
-            int collectionIterationIndex = 0;
-            int answerIndex = 0;
-            int[] answers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            PopulateInputs();
+            PopulatePuzzlesStates();
+            SetUpInitialState();
+            Solver();
 
-            // brute force the values
-            foreach (int value in Inputs.ToList())
-            {
-                if (value == -1)
-                {
-                    do
-                    {
-                        if (collectionIterationIndex == 0)
-                        {
-                            Inputs[collectionIterationIndex] = 1;
-                        }
-                        else
-                        {
-                            Inputs[collectionIterationIndex] = answers[answerIndex % 9];
-                            answerIndex++;
-                        }
-                        
-                    } while (!MoveIsValid(Inputs[collectionIterationIndex], GetPosition(collectionIterationIndex).X, GetPosition(collectionIterationIndex).Y));
-                }
-                collectionIterationIndex++;
-                Console.WriteLine($"CellIndex: {collectionIterationIndex}");
-            }
-
+            #region Assigner
+            /*
             // assign the values back to the textBoxes;
-            collectionIterationIndex = 0;
-            List<int> InputCopy = Inputs.ToList();
+            int collectionIterationIndex = 0;
+            List<int> InputCopy = Inputs.;
             InputCopy.Reverse();
             foreach (Control ctrl in Controls)
             {
@@ -61,78 +41,101 @@ namespace SudokuSolver
                     collectionIterationIndex++;
                 }
             }
+            */
+            #endregion
             solveButton.Enabled = false;
+
         }
 
-        private void PopulateInputs()
+        /// <summary>
+        /// This method extracts the state of the textbox controls and copies their values to a list.
+        /// </summary>
+        private void PopulatePuzzlesStates()
         {
-            Inputs.Clear();
+            int cellIndex = 0;
             foreach (Control ctrl in Controls)
             {
                 if (ctrl is TextBox)
                 {
                     if (string.IsNullOrEmpty(ctrl.Text))
                     {
-                        Inputs.Add(-1);
+                        Inputs[cellIndex / 9, cellIndex % 9] = -1;
                     }
                     else
                     {
-                        Inputs.Add(Convert.ToInt32(ctrl.Text));
+                        Inputs[cellIndex / 9, cellIndex % 9] = Convert.ToInt32(ctrl.Text);
                     }
+                    cellIndex++;
+                }
+            }
+            Solution = Inputs;
+        }
+
+        /// <summary>
+        /// This Mthods records the intial state of the puzzle before the solution starts.
+        /// </summary>
+        private void SetUpInitialState()
+        {
+            for (int cell = 0; cell < 81; cell++)
+            {
+                if (Inputs[cell % 9, cell / 9] == -1)
+                {
+                    PartOfQuestion[cell / 9, cell % 9] = false;
+                }
+                else
+                {
+                    PartOfQuestion[cell / 9, cell % 9] = true;
                 }
             }
         }
 
+        /// <summary>
+        /// This methods solves the current puzzle state, using a simple traceback algorithm.
+        /// </summary>
+        private void Solver()
+        {
+
+        }
+
+        /// <summary>
+        /// Checks if a move at the specified coordinates is valid.
+        /// </summary>
+        /// <param name="move">The value that was assigned at the coordinate</param>
+        /// <param name="column">The column that the move took place in</param>
+        /// <param name="row">The row that the move took place in</param>
+        /// <returns>{bool} whether the move made at coordinate is valid</returns>
         private bool MoveIsValid(int move, int column, int row)
         {
             bool isValid = true;
             // check the row for same value
-            for (int x = 0; x < 9; x++)
-            {
-                if (move == Inputs[FindIndex(x, row)])
-                {
-                    if (x != column)
-                    {
-                        isValid = false;
-                    }
-                }
-            }
 
             // check the column for same value
-            for (int y = 0; y < 9; y++)
-            {
-                if (move == Inputs[FindIndex(column, y)])
-                {
-                    if (y != row)
-                    {
-                        isValid = false;
-                    }
-                }
-            }
 
-            // check the 9x9 cell for same value
+            // check the box for same value
+
 
             return isValid;
         }
 
+        /// <summary>
+        /// finds the coordinate(2D) of the given cell index(1D)
+        /// </summary>
+        /// <param name="index">The one dimmensional index of the cell</param>
+        /// <returns>{Position} struct instance with the 2D coordinates</returns>
         private Position GetPosition(int index)
         {
             return new Position(index % 9, index / 9);
         }
 
+        /// <summary>
+        /// Finds the cell index (1D) of the provided coordinates(2D)
+        /// </summary>
+        /// <param name="column">the X coordinate of the cell</param>
+        /// <param name="row">the Y coordinate of the cell</param>
+        /// <returns>{int} 1D cell index of the cell</returns>
         private int FindIndex(int column, int row)
         {
             return column + (row * 9);
         }
-    }
-
-    struct Position
-    {
-        public Position(int x, int y)
-        {
-            X = x;
-            Y = y;
-        }
-        public int X, Y;
     }
 }
