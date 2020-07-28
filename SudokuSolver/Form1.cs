@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using SudokuSolver.Utils;
 
 namespace SudokuSolver
 {
@@ -24,7 +25,7 @@ namespace SudokuSolver
         private void solveButton_Click(object sender, EventArgs e)
         {
             PopulatePuzzlesStates();
-            SetUpInitialState();
+            SetUpPartOfQuestion();
             Solver();
 
             #region Assigner
@@ -44,7 +45,6 @@ namespace SudokuSolver
             */
             #endregion
             solveButton.Enabled = false;
-
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace SudokuSolver
         /// <summary>
         /// This Mthods records the intial state of the puzzle before the solution starts.
         /// </summary>
-        private void SetUpInitialState()
+        private void SetUpPartOfQuestion()
         {
             for (int cell = 0; cell < 81; cell++)
             {
@@ -94,7 +94,23 @@ namespace SudokuSolver
         /// </summary>
         private void Solver()
         {
-
+            int[] answers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            // scan through rows
+            for (int row = 0; row < 9; row++)
+            {
+                for (int column = 0; column < 9; column++)
+                {
+                    if (!PartOfQuestion[row, column])
+                    {
+                        int answerIndex = 0;
+                        do
+                        {
+                            Solution[row, column] = answers[answerIndex];
+                            answerIndex++;
+                        } while (!MoveIsValid(Solution[row, column], column, row));
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -108,7 +124,14 @@ namespace SudokuSolver
         {
             bool isValid = true;
             // check the row for same value
-
+            for (int x = 0; x < 9; x++)
+            {
+                if (move == Solution[row, x])
+                {
+                    if (x != column)
+                        isValid = false;
+                }
+            }
             // check the column for same value
 
             // check the box for same value
@@ -117,25 +140,5 @@ namespace SudokuSolver
             return isValid;
         }
 
-        /// <summary>
-        /// finds the coordinate(2D) of the given cell index(1D)
-        /// </summary>
-        /// <param name="index">The one dimmensional index of the cell</param>
-        /// <returns>{Position} struct instance with the 2D coordinates</returns>
-        private Position GetPosition(int index)
-        {
-            return new Position(index % 9, index / 9);
-        }
-
-        /// <summary>
-        /// Finds the cell index (1D) of the provided coordinates(2D)
-        /// </summary>
-        /// <param name="column">the X coordinate of the cell</param>
-        /// <param name="row">the Y coordinate of the cell</param>
-        /// <returns>{int} 1D cell index of the cell</returns>
-        private int FindIndex(int column, int row)
-        {
-            return column + (row * 9);
-        }
     }
 }
