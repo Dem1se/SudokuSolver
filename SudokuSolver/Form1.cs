@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
-using SudokuSolver.Utils;
 
 namespace SudokuSolver
 {
@@ -68,7 +69,7 @@ namespace SudokuSolver
                     cellIndex++;
                 }
             }
-            Solution = Inputs;
+            Array.Copy(Inputs, Solution, 81);
         }
 
         /// <summary>
@@ -95,21 +96,57 @@ namespace SudokuSolver
         private void Solver()
         {
             int[] answers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            // scan through rows
             for (int row = 0; row < 9; row++)
             {
                 for (int column = 0; column < 9; column++)
                 {
+                    int answerIndex = 0;
                     if (!PartOfQuestion[row, column])
                     {
-                        int answerIndex = 0;
                         do
                         {
-                            Solution[row, column] = answers[answerIndex];
-                            answerIndex++;
+                            try
+                            {
+                                Solution[row, column] = answers[answerIndex];
+                                answerIndex++;
+                            }
+                            catch (IndexOutOfRangeException)
+                            {
+                                Solution[row, column] = -1;
+                                BackTraceRoutine(row, column, answerIndex);
+                            }
                         } while (!MoveIsValid(Solution[row, column], column, row));
                     }
                 }
+            }
+
+            void BackTraceRoutine(int row, int column, int answerIndex)
+            {
+                do
+                {
+                    // check if the cell is part of the question, don't modify if true
+                    if (!PartOfQuestion[row, column])
+                    {
+                        // keep moving to the left and adding value untill valid
+                        try
+                        {
+                            column--;
+                            answerIndex++;
+                            Solution[row, column] = answers[answerIndex];
+                        }
+                        // if you can't move left anymore, move up
+                        catch (IndexOutOfRangeException)
+                        {
+                            row--;
+                            column = 8;
+                        }
+                    }
+                    // if cell is part of the question, move one step to the left
+                    else
+                    {
+                        column--;
+                    }
+                } while (!MoveIsValid(Solution[row, column], column, row));
             }
         }
 
@@ -132,13 +169,45 @@ namespace SudokuSolver
                         isValid = false;
                 }
             }
+
             // check the column for same value
+            for (int y = 0; y < 9; y++)
+            {
+                if (move == Solution[y, column])
+                {
+                    if (y != row)
+                        isValid = false;
+                }
+            }
 
             // check the box for same value
+            // generate the list for the cell block
+            List<int> cellBlock = new List<int>(9);
+            for (int vertical = 0; vertical < 3; vertical++)
+            {
+                for (int horizontal = 0; horizontal < 3; horizontal++)
+                {
+                    cellBlock.Add(
+                        Solution
+                        [
+                            (Utils.Utils.FindCellBlock(row, column)[0] * 3) + vertical,
+                            (Utils.Utils.FindCellBlock(row, column)[1] * 3) + horizontal
+                        ]
+                    );
+                }
+            }
 
-
+            cellBlock.RemoveAll(new Predicate<int>(x => x == -1));
+            var duplicates = cellBlock.GroupBy(x => x)
+                .Where(g => g.Count() > 1)
+                .Select(x => x.Key);
+            if (duplicates.Count() > 0)
+            {
+                isValid = false;
+            }
+            
+            
             return isValid;
         }
-
     }
 }
