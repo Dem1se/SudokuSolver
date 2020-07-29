@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace SudokuSolver
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private int[,] Grid = new int[9, 9];
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
