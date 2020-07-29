@@ -82,21 +82,17 @@ namespace SudokuSolver
         {
             Console.WriteLine("Assigned values back");
             Utils.Utils.PrettyPrintArray(Grid);
+
             // assign the values back to the textBoxes;
-            
-            /*
             int collectionIterationIndex = 0;
-            List<int> InputCopy = Inputs.;
-            InputCopy.Reverse();
             foreach (Control ctrl in Controls)
             {
                 if (ctrl is TextBox)
                 {
-                    ctrl.Text = InputCopy[collectionIterationIndex].ToString();
+                    ctrl.Text = Grid[collectionIterationIndex / 9, collectionIterationIndex % 9].ToString();
                     collectionIterationIndex++;
                 }
             }
-            */
         }
 
         /// <summary>
