@@ -114,6 +114,7 @@
             // 
             // textBox0
             // 
+            this.textBox0.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox0.Location = new System.Drawing.Point(119, 40);
             this.textBox0.MaxLength = 1;
             this.textBox0.Name = "textBox0";
@@ -123,6 +124,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox1.Location = new System.Drawing.Point(145, 40);
             this.textBox1.MaxLength = 1;
             this.textBox1.Name = "textBox1";
@@ -132,6 +134,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox2.Location = new System.Drawing.Point(173, 40);
             this.textBox2.MaxLength = 1;
             this.textBox2.Name = "textBox2";
@@ -165,6 +168,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox6.Location = new System.Drawing.Point(277, 40);
             this.textBox6.MaxLength = 1;
             this.textBox6.Name = "textBox6";
@@ -173,6 +177,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox7.Location = new System.Drawing.Point(303, 40);
             this.textBox7.MaxLength = 1;
             this.textBox7.Name = "textBox7";
@@ -181,6 +186,7 @@
             // 
             // textBox8
             // 
+            this.textBox8.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox8.Location = new System.Drawing.Point(329, 40);
             this.textBox8.MaxLength = 1;
             this.textBox8.Name = "textBox8";
@@ -189,6 +195,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox9.Location = new System.Drawing.Point(119, 66);
             this.textBox9.MaxLength = 1;
             this.textBox9.Name = "textBox9";
@@ -198,6 +205,7 @@
             // 
             // textBox10
             // 
+            this.textBox10.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox10.Location = new System.Drawing.Point(145, 66);
             this.textBox10.MaxLength = 1;
             this.textBox10.Name = "textBox10";
@@ -206,6 +214,7 @@
             // 
             // textBox11
             // 
+            this.textBox11.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox11.Location = new System.Drawing.Point(173, 66);
             this.textBox11.MaxLength = 1;
             this.textBox11.Name = "textBox11";
@@ -241,6 +250,7 @@
             // 
             // textBox15
             // 
+            this.textBox15.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox15.Location = new System.Drawing.Point(277, 66);
             this.textBox15.MaxLength = 1;
             this.textBox15.Name = "textBox15";
@@ -249,6 +259,7 @@
             // 
             // textBox16
             // 
+            this.textBox16.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox16.Location = new System.Drawing.Point(303, 66);
             this.textBox16.MaxLength = 1;
             this.textBox16.Name = "textBox16";
@@ -257,6 +268,7 @@
             // 
             // textBox17
             // 
+            this.textBox17.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox17.Location = new System.Drawing.Point(329, 66);
             this.textBox17.MaxLength = 1;
             this.textBox17.Name = "textBox17";
@@ -265,6 +277,7 @@
             // 
             // textBox18
             // 
+            this.textBox18.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox18.Location = new System.Drawing.Point(119, 92);
             this.textBox18.MaxLength = 1;
             this.textBox18.Name = "textBox18";
@@ -273,6 +286,7 @@
             // 
             // textBox19
             // 
+            this.textBox19.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox19.Location = new System.Drawing.Point(145, 92);
             this.textBox19.MaxLength = 1;
             this.textBox19.Name = "textBox19";
@@ -282,6 +296,7 @@
             // 
             // textBox20
             // 
+            this.textBox20.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox20.Location = new System.Drawing.Point(171, 92);
             this.textBox20.MaxLength = 1;
             this.textBox20.Name = "textBox20";
@@ -315,6 +330,7 @@
             // 
             // textBox24
             // 
+            this.textBox24.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox24.Location = new System.Drawing.Point(277, 92);
             this.textBox24.MaxLength = 1;
             this.textBox24.Name = "textBox24";
@@ -323,6 +339,7 @@
             // 
             // textBox25
             // 
+            this.textBox25.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox25.Location = new System.Drawing.Point(303, 92);
             this.textBox25.MaxLength = 1;
             this.textBox25.Name = "textBox25";
@@ -332,6 +349,7 @@
             // 
             // textBox26
             // 
+            this.textBox26.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox26.Location = new System.Drawing.Point(329, 92);
             this.textBox26.MaxLength = 1;
             this.textBox26.Name = "textBox26";
@@ -365,6 +383,7 @@
             // 
             // textBox30
             // 
+            this.textBox30.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox30.Location = new System.Drawing.Point(199, 118);
             this.textBox30.MaxLength = 1;
             this.textBox30.Name = "textBox30";
@@ -373,6 +392,7 @@
             // 
             // textBox31
             // 
+            this.textBox31.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox31.Location = new System.Drawing.Point(225, 118);
             this.textBox31.MaxLength = 1;
             this.textBox31.Name = "textBox31";
@@ -382,6 +402,7 @@
             // 
             // textBox32
             // 
+            this.textBox32.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox32.Location = new System.Drawing.Point(251, 118);
             this.textBox32.MaxLength = 1;
             this.textBox32.Name = "textBox32";
@@ -440,6 +461,7 @@
             // 
             // textBox39
             // 
+            this.textBox39.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox39.Location = new System.Drawing.Point(199, 144);
             this.textBox39.MaxLength = 1;
             this.textBox39.Name = "textBox39";
@@ -449,6 +471,7 @@
             // 
             // textBox40
             // 
+            this.textBox40.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox40.Location = new System.Drawing.Point(225, 144);
             this.textBox40.MaxLength = 1;
             this.textBox40.Name = "textBox40";
@@ -457,6 +480,7 @@
             // 
             // textBox41
             // 
+            this.textBox41.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox41.Location = new System.Drawing.Point(251, 144);
             this.textBox41.MaxLength = 1;
             this.textBox41.Name = "textBox41";
@@ -516,6 +540,7 @@
             // 
             // textBox48
             // 
+            this.textBox48.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox48.Location = new System.Drawing.Point(199, 170);
             this.textBox48.MaxLength = 1;
             this.textBox48.Name = "textBox48";
@@ -524,6 +549,7 @@
             // 
             // textBox49
             // 
+            this.textBox49.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox49.Location = new System.Drawing.Point(225, 170);
             this.textBox49.MaxLength = 1;
             this.textBox49.Name = "textBox49";
@@ -533,6 +559,7 @@
             // 
             // textBox50
             // 
+            this.textBox50.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox50.Location = new System.Drawing.Point(251, 170);
             this.textBox50.MaxLength = 1;
             this.textBox50.Name = "textBox50";
@@ -566,6 +593,7 @@
             // 
             // textBox54
             // 
+            this.textBox54.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox54.Location = new System.Drawing.Point(119, 196);
             this.textBox54.MaxLength = 1;
             this.textBox54.Name = "textBox54";
@@ -574,6 +602,7 @@
             // 
             // textBox55
             // 
+            this.textBox55.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox55.Location = new System.Drawing.Point(145, 196);
             this.textBox55.MaxLength = 1;
             this.textBox55.Name = "textBox55";
@@ -583,6 +612,7 @@
             // 
             // textBox56
             // 
+            this.textBox56.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox56.Location = new System.Drawing.Point(173, 196);
             this.textBox56.MaxLength = 1;
             this.textBox56.Name = "textBox56";
@@ -615,6 +645,7 @@
             // 
             // textBox60
             // 
+            this.textBox60.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox60.Location = new System.Drawing.Point(277, 196);
             this.textBox60.MaxLength = 1;
             this.textBox60.Name = "textBox60";
@@ -624,6 +655,7 @@
             // 
             // textBox61
             // 
+            this.textBox61.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox61.Location = new System.Drawing.Point(303, 196);
             this.textBox61.MaxLength = 1;
             this.textBox61.Name = "textBox61";
@@ -633,6 +665,7 @@
             // 
             // textBox62
             // 
+            this.textBox62.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox62.Location = new System.Drawing.Point(329, 196);
             this.textBox62.MaxLength = 1;
             this.textBox62.Name = "textBox62";
@@ -641,6 +674,7 @@
             // 
             // textBox63
             // 
+            this.textBox63.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox63.Location = new System.Drawing.Point(119, 222);
             this.textBox63.MaxLength = 1;
             this.textBox63.Name = "textBox63";
@@ -649,6 +683,7 @@
             // 
             // textBox64
             // 
+            this.textBox64.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox64.Location = new System.Drawing.Point(145, 222);
             this.textBox64.MaxLength = 1;
             this.textBox64.Name = "textBox64";
@@ -657,6 +692,7 @@
             // 
             // textBox65
             // 
+            this.textBox65.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox65.Location = new System.Drawing.Point(173, 222);
             this.textBox65.MaxLength = 1;
             this.textBox65.Name = "textBox65";
@@ -692,6 +728,7 @@
             // 
             // textBox69
             // 
+            this.textBox69.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox69.Location = new System.Drawing.Point(277, 222);
             this.textBox69.MaxLength = 1;
             this.textBox69.Name = "textBox69";
@@ -700,6 +737,7 @@
             // 
             // textBox70
             // 
+            this.textBox70.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox70.Location = new System.Drawing.Point(303, 222);
             this.textBox70.MaxLength = 1;
             this.textBox70.Name = "textBox70";
@@ -708,6 +746,7 @@
             // 
             // textBox71
             // 
+            this.textBox71.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox71.Location = new System.Drawing.Point(329, 222);
             this.textBox71.MaxLength = 1;
             this.textBox71.Name = "textBox71";
@@ -717,6 +756,7 @@
             // 
             // textBox72
             // 
+            this.textBox72.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox72.Location = new System.Drawing.Point(119, 248);
             this.textBox72.MaxLength = 1;
             this.textBox72.Name = "textBox72";
@@ -725,6 +765,7 @@
             // 
             // textBox73
             // 
+            this.textBox73.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox73.Location = new System.Drawing.Point(145, 248);
             this.textBox73.MaxLength = 1;
             this.textBox73.Name = "textBox73";
@@ -733,6 +774,7 @@
             // 
             // textBox74
             // 
+            this.textBox74.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox74.Location = new System.Drawing.Point(173, 248);
             this.textBox74.MaxLength = 1;
             this.textBox74.Name = "textBox74";
@@ -766,6 +808,7 @@
             // 
             // textBox78
             // 
+            this.textBox78.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox78.Location = new System.Drawing.Point(277, 248);
             this.textBox78.MaxLength = 1;
             this.textBox78.Name = "textBox78";
@@ -774,6 +817,7 @@
             // 
             // textBox79
             // 
+            this.textBox79.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox79.Location = new System.Drawing.Point(303, 248);
             this.textBox79.MaxLength = 1;
             this.textBox79.Name = "textBox79";
@@ -783,6 +827,7 @@
             // 
             // textBox80
             // 
+            this.textBox80.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox80.Location = new System.Drawing.Point(329, 248);
             this.textBox80.MaxLength = 1;
             this.textBox80.Name = "textBox80";
@@ -804,6 +849,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.solveButton);
             this.Controls.Add(this.textBox0);
