@@ -24,8 +24,18 @@ namespace SudokuSolver
         private void solveButton_Click(object sender, EventArgs e)
         {
             PopulateGridData();
+            if (Utils.Verify.IsEmpty(Grid)) 
+            {
+                MessageBox.Show("The Puzzle is empty, fill in some values to solve first.", "Empty Puzzle", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
+            if (!Utils.Verify.IsValid(Grid))
+            {
+                MessageBox.Show("The Puzzle is not valid, check the values.", "Invalid Puzzle", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Console.WriteLine("Valid puzzle. Starting Solving.");
             Solver();
-            solveButton.Enabled = false;
         }
 
         /// <summary>
@@ -148,6 +158,17 @@ namespace SudokuSolver
             }
 
             return isValid;
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            foreach (Control ctrl in Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ctrl.Text = "";
+                }
+            }
         }
     }
 }
